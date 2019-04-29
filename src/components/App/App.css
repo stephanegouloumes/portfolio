@@ -1,0 +1,23 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+.c-app {
+    padding: 0 30px 30px 30px;
+    height: 100%;
+}
+
+.container {
+    background: #CCC;
+    min-height: 100%;
+}
