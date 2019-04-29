@@ -1,0 +1,49 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: Roboto, sans-serif;
+}
+
+#root {
+    height: 100%;
+}
+
+.c-app {
+    height: calc(100% - 30px);
+    padding: 0 30px 30px 30px;
+}
+
+.container {
+    height: calc(100% - 60px);
+    background: $gray-light;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-family: Quicksand;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 80px;
+    letter-spacing: 2px;
+    color: $orange;
+
+    & .is-light {
+        color: $orange-light;
+    }
+}
+
+.title-bar {
+    margin-left: -46px;
+    width: 173.52px;
+    height: 6px;
+    background: $orange-light;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+}
