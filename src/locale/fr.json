@@ -1,0 +1,29 @@
+{
+    "translations" : {
+        "navbar": {
+            "home": "ACCEUIL",
+            "about": "A PROPOS",
+            "work": "PROJETS",
+            "contact": "CONTACT"
+        },
+        "about": {
+            "header": {
+                "title_1": "A PROPOS",
+                "title_2": "DE MOI."
+            },
+            "section": {
+                "title": "Développeur Web Fullstack",
+                "description": "Diplômé d'un Master II MIAGE orienté en programmation et gestion de projet, j'ai travaillé dans une grande entreprise en tant que développeur web full stack pendant 3 ans. Cela fait maintenant plus de 2 ans que je travaille en tant qu'indépendant.",
+                 "stats": {
+                     "experience": "5+ Années d'expérience"
+                 },
+                 "skills": {
+                     "frontend": "Front-end",
+                     "backend": "Back-end",
+                     "databases": "Base de données",
+                     "tools": "Outils"
+                 }
+            }
+        }
+    }
+}

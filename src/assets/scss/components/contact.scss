@@ -1,0 +1,23 @@
+.c-contact {
+    height: calc(100% - 100px);
+    padding: 40px 0 0 100px;
+
+    .title {
+        color: $red;
+
+        & .is-light {
+            color: $red-light;
+        }
+    }
+
+    .title-bar {
+        background-color: $red-light;
+        margin-left: 0px;
+    }
+
+    & section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 200px;
+    }
+}

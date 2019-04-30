@@ -1,0 +1,29 @@
+{
+    "translations" : {
+        "navbar": {
+            "home": "HOME",
+            "about": "ABOUT",
+            "work": "WORK",
+            "contact": "CONTACT"
+        },
+        "about": {
+            "header": {
+                "title_1": "ABOUT",
+                "title_2": "ME."
+            },
+            "section": {
+                "title": "Full Stack Web Developer",
+                "description": "Graduated of a MSc in Computer Science and Project Management, I worked as a Full Stack Web Developer for 3 years in a large company. Then, I started working as a freelancer 2 years ago.",
+                "stats": {
+                    "experience": "5+ Years of experience"
+                },
+                "skills": {
+                    "frontend": "Front-end",
+                    "backend": "Back-end",
+                    "databases": "Databases",
+                    "tools": "Tools"
+                }
+            }
+        }
+    }
+}

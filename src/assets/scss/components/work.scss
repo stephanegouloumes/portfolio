@@ -1,0 +1,23 @@
+.c-work {
+    height: calc(100% - 100px);
+    padding: 40px 0 0 100px;
+
+    .title {
+        color: $blue;
+
+        & .is-light {
+            color: $blue-light;
+        }
+    }
+
+    .title-bar {
+        background-color: $blue-light;
+        margin-left: 0px;
+    }
+
+    & section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 200px;
+    }
+}

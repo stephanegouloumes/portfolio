@@ -12,6 +12,8 @@ body {
 }
 
 .c-app {
+    position: relative;
+    z-index: 1;
     height: calc(100% - 30px);
     padding: 0 30px 30px 30px;
 }
@@ -43,7 +45,7 @@ header {
     margin-left: -46px;
     width: 173.52px;
     height: 6px;
-    background: $orange-light;
+    background-color: $orange-light;
     border-radius: 10px;
     transform: rotate(-45deg);
 }

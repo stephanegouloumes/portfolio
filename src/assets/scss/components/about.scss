@@ -51,7 +51,7 @@
     }
 
     & .c-about__stat-label {
-        margin-left: 60px;
+        margin-left: 30px;
         font-size: 22px;
         color: $text-gray;
     }
@@ -67,7 +67,7 @@
     width: 50%;
     height: 100%;
     padding: 50px 90px;
-    background-color: #EFEFEF;
+    background-color: $gray-dark;
 }
 
 .c-about__skills-column {

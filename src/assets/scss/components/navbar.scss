@@ -12,7 +12,63 @@
 }
 
 .c-navbar__list--left {
+    position: relative;
     width: 40%;
+
+    &.is-about .c-navbar__item {
+        color: $orange;
+    }
+
+    &.is-work .c-navbar__item {
+        color: $blue;
+    }
+
+    &.is-contact .c-navbar__item {
+        color: $red;
+    }
+
+    .c-navbar__item {
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 13px;
+        letter-spacing: 2px;
+        color: $green;
+        transition-duration: 0.5s;
+        transition-property: color;
+
+
+        &.is-active {
+            color: #FFF;
+            transition-duration: 0.25s;
+            transition-property: color;
+        }
+    }
+
+    .c-navbar__active-item {
+        position: absolute;
+        z-index: -1;
+        top: 0px;
+        left: 0;
+        width: 90px;
+        height: 30px;
+        background-color: $green;
+        transition-duration: 0.5s;
+        transition-property: background-color;
+
+        &.is-about {
+            background-color: $orange;
+        }
+
+        &.is-work {
+            background-color: $blue;
+        }
+
+        &.is-contact {
+            background-color: $red;
+        }
+    }
 }
 
 .c-navbar__list--right {
@@ -22,23 +78,12 @@
     .c-navbar__item {
         font-size: 14px;
         font-weight: 300;
-        color: $gray-dark;
+        color: $text-gray-dark;
+        cursor: pointer;
 
         &.is-active {
             font-weight: normal;
-            color: $gray-dark;
+            color: $text-gray-dark;
         }
-    }
-}
-
-.c-navbar__item {
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 13px;
-    letter-spacing: 2px;
-    color: #FFB45C;
-
-    &.is-active {
-        color: #AAA;
     }
 }
