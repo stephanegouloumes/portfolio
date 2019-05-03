@@ -1,5 +1,6 @@
 @import 'base/reset.scss';
 @import 'base/colors.scss';
+@import url('../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
 
 // Components
 @import 'components/app.scss';
@@ -8,4 +9,6 @@
 @import 'components/about.scss';
 @import 'components/home.scss';
 @import 'components/work.scss';
+@import 'components/projectCard.scss';
+@import 'components/projectModal.scss';
 @import 'components/contact.scss';

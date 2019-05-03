@@ -24,6 +24,14 @@
                      "tools": "Outils"
                  }
             }
+        },
+        "work": {
+
+        },
+        "contact": {
+            "section": {
+                "title": "N'hésitez pas à me contacter."
+            }
         }
     }
 }

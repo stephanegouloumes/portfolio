@@ -18,6 +18,11 @@ class Navbar extends Component {
 
     componentDidMount() {
         this.updateStyle(window.location.pathname)
+        window.addEventListener('resize', () => this.resizeActiveItem(this.state.themeColor));
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.resizeActiveItem);
     }
 
     updateStyle(location) {
@@ -28,9 +33,13 @@ class Navbar extends Component {
             themeColor = 'is-home'
         }
 
-        this.setState({ themeColor })
+        this.resizeActiveItem(themeColor)
 
-        // Update the active item background
+        this.setState({ themeColor })
+    }
+
+    // Update the active item background
+    resizeActiveItem = (themeColor) => {
         const element = document.getElementById('js-category' + themeColor.slice(2))
         const activeElement = document.getElementById('js-category-active')
 
@@ -39,15 +48,11 @@ class Navbar extends Component {
     }
 
     changeLang = (lang) => {
-        this.setState({ lang })
         this.props.i18n.changeLanguage(lang)
-
-        // BUG
-        this.updateStyle(window.location.pathname)
+        this.setState({ lang }, () => {this.updateStyle(window.location.pathname)})
     }
 
     render() {
-        console.log(this.state.lang === 'en' ? 'is-active' : '')
         const t = this.props.t
         return (
             <nav className="c-navbar">

@@ -24,6 +24,14 @@
                     "tools": "Tools"
                 }
             }
+        },
+        "work": {
+
+        },
+        "contact": {
+            "section": {
+                "title": "Please, feel free to contact me."
+            }
         }
     }
 }

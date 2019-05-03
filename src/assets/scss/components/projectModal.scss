@@ -1,0 +1,67 @@
+.c-project-modal {
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 920px;
+    height: 500px;
+    display: flex;
+    flex-flow: row;
+    background-color: #FFF;
+    border-radius: 2px;
+    box-shadow: $shadow-light;
+}
+
+.c-project-modal__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: $text-gray;
+    cursor: pointer;
+}
+
+.c-project-modal__sidebar {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    width: 360px;
+    padding: 40px 20px 20px 20px;
+    // background-color: $gray-light;
+}
+
+.c-project-modal__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: $text-gray-dark;
+}
+
+.c-project-modal__description {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: $text-gray;
+}
+
+.c-project-modal__tags {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.c-project-modal__carousel{
+    width: 100%;
+}
+
+.c-project-modal__carousel img {
+    width: 100%;
+}
