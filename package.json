@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "detect-browser-language": "0.0.2",
     "i18next": "^15.1.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",

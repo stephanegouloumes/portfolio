@@ -1,12 +1,15 @@
 import React from 'react'
+import { withTranslation } from 'react-i18next'
 
 class ProjectModal extends React.Component {
     componentWillMount() {
         document.addEventListener('mousedown', this.handleComponentClick, false)
+        document.addEventListener('keydown', this.handleComponentKeyPress, false)
     }
 
     componentWillUnmount() {
         document.removeEventListener('mousedown', this.handleComponentClick, false)
+        document.removeEventListener('keydown', this.handleComponentKeyPress, false)
     }
 
     handleComponentClick = (e) => {
@@ -19,28 +22,35 @@ class ProjectModal extends React.Component {
         this.props.onHideModal()
     }
 
+    handleComponentKeyPress = (e) => {
+        if (e.keyCode === 27) {
+            this.props.onHideModal()
+        }
+    }
+
     render() {
-        const { project, onHideModal } = this.props
+        const { project, t } = this.props
 
         return (
             <div className="c-project-modal" ref={node => this.node = node}>
-                <div className="c-project-modal__sidebar">
+                <div className="c-project-modal__header">
                     <h3 className="c-project-modal__title">{project.title}</h3>
-                    <a className="c-project-modal__button o-button o-button--small o-button--red o-button--ripple" href="http://google.fr">Accéder au Site Web</a>
-                    <p className="c-project-modal__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, temporibus. Vel, facere ullam natus accusantium alias dolorum obcaecati autem nobis architecto incidunt sit illum, consequuntur saepe perferendis dolores delectus laudantium.</p>
+                    <a className="c-project-modal__button o-button o-button--small o-button--red o-button--ripple" href={project.link}>{t('work.modal.button')}</a>
+                </div>
+                <div className="c-project-modal__carousel">
+                    <img src={project.url} alt={project.title}/>
+                </div>
+                <div className="c-project-modal__content">
+                    <p className="c-project-modal__description">{project.description}</p>
                     <div className="c-project-modal__tags">
                         {project.tags.map((tag, key) => {
                             return <span className="o-tag o-tag--small" key={key}>{tag}</span>
                         })}
                     </div>
                 </div>
-                <div className="c-project-modal__carousel">
-                    <img src={project.url} alt=""/>
-                </div>
-                <span className="c-project-modal__close" onClick={onHideModal}><i className="fas fa-times"></i></span>
             </div>
         )
     }
 }
 
-export default ProjectModal
+export default withTranslation('translations')(ProjectModal)

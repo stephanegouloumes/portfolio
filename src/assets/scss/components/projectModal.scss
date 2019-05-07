@@ -17,10 +17,10 @@
 
 .c-project-modal__close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 40px;
+    right: 40px;
     font-size: 24px;
-    color: $text-gray;
+    color: #FFF;
     cursor: pointer;
 }
 
@@ -30,19 +30,24 @@
     flex-flow: column;
     width: 360px;
     padding: 40px 20px 20px 20px;
-    // background-color: $gray-light;
 }
 
 .c-project-modal__title {
+    margin-bottom: 20px;
     font-size: 36px;
-    margin-bottom: 40px;
     text-align: center;
     color: $text-gray-dark;
 }
 
+.c-project-modal__button {
+    margin: 10px auto 20px auto;
+    max-width: 150px;
+}
+
 .c-project-modal__description {
-    font-size: 18px;
-    letter-spacing: 1px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 21px;
     margin-bottom: 20px;
     color: $text-gray;
 }
@@ -60,8 +65,10 @@
 
 .c-project-modal__carousel{
     width: 100%;
+    padding: 20px 20px 0 0;
 }
 
 .c-project-modal__carousel img {
     width: 100%;
+    border-radius: 2px;
 }

@@ -1,6 +1,11 @@
 @import 'base/reset.scss';
+@import 'base/animations.scss';
 @import 'base/colors.scss';
 @import url('../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css');
+
+// Objects
+@import 'objects/buttons.scss';
+@import 'objects/tags.scss';
 
 // Components
 @import 'components/app.scss';
@@ -10,5 +15,6 @@
 @import 'components/home.scss';
 @import 'components/work.scss';
 @import 'components/projectCard.scss';
-@import 'components/projectModal.scss';
+// @import 'components/projectModal.scss';
+@import 'components/projectModal2.scss';
 @import 'components/contact.scss';

@@ -16,8 +16,12 @@ const About = () => {
                     <p className="c-about__desc">{t('about.section.description')}</p>
                     <div className="c-about__stats">
                         <div className="c-about__stat">
-                            <div className="c-about__stat-circle"></div>
+                            <div className="c-about__stat-circle"><i class="fas fa-briefcase"></i></div>
                             <div className="c-about__stat-label">{t('about.section.stats.experience')}</div>
+                        </div>
+                        <div className="c-about__stat">
+                            <div className="c-about__stat-circle"><i class="fas fa-globe-europe"></i></div>
+                            <div className="c-about__stat-label">{t('about.section.stats.international')}</div>
                         </div>
                     </div>
                 </div>
