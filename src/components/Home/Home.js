@@ -19,7 +19,7 @@ const Home = () => {
                     <NavLink className="c-home__button" to="/about"><span>{t('home.button')}</span></NavLink>
                 </div>
             </div>
-            <div className="c-home__col"></div>
+            <div className="c-home__col c-home__col--right"></div>
             </div>
         </div>
     )

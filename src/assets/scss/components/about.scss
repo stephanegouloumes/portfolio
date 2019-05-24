@@ -1,21 +1,54 @@
 .c-about {
+    position: relative;
     height: calc(100% - 100px);
     padding: 40px 0 0 100px;
 
+    overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  // IE 10+
+    scrollbar-width: none;  // Firefox
+    &::-webkit-scrollbar {
+        display: none;  // Safari and Chrome
+    }
+
     & section {
         display: flex;
+        flex-flow: column;
         justify-content: space-between;
-        margin-top: 170px;
+        height: calc(100% - 160px);
     }
+}
+
+.c-about__row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &.c-about__row--first {
+        margin-top: 20px;
+        justify-content: space-between;
+        width: calc(100% - 450px);
+    }
+}
+
+//
+// AVATAR
+//
+
+.c-about__avatar {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 172px;
 }
 
 //
 // INFOS
 //
-
-.c-about__info {
-    width: 40%;
-}
 
 .c-about__title {
     font-family: Noto Sans;
@@ -24,45 +57,81 @@
     font-size: 30px;
     line-height: 31px;
     color: $orange;
+    cursor: default;
 }
 
 .c-about__desc {
     margin-top: 30px;
-    max-width: 400px;
+    max-width: 460px;
     font-size: 16px;
     line-height: 26px;
     color: $text-gray;
+    color: #808080;
 }
 
 .c-about__stats {
-    margin-top: 40px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    margin-right: 50px; 
 }
 
 .c-about__stat {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
 
     & .c-about__stat-circle {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         box-sizing: border-box;
-        border: 3px solid $text-gray;
+        border: 3px solid $blue;
         border-radius: 60px;
 
         & i {
-            font-size: 36px;
-            color: $text-gray;
+            font-size: 24px;
+            color: $blue;
         }
     }
 
     & .c-about__stat-label {
-        margin-left: 30px;
-        font-size: 22px;
-        color: $text-gray;
+        margin-left: 24px;
+        font-size: 21px;
+        color: $blue;
+        cursor: default;
+    }
+}
+
+//
+// SERVICES
+//
+
+.c-about__services {
+    & .c-about__service {
+        display: flex;
+        align-items: center;
+        // flex-flow: row wrap;
+        margin-bottom: 40px;
+        color: $blue;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        & i {
+            width: 40px;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        & span {
+            margin-left: 30px;
+            font-size: 21px;
+            cursor: default;
+        }
     }
 }
 
@@ -73,27 +142,126 @@
 .c-about__skills {
     display: flex;
     justify-content: space-between;
+    flex-flow: row wrap;
     width: 50%;
-    height: 100%;
-    padding: 50px 90px;
+    padding: 60px 80px;
+    border-radius: 8px 0 0 0;
     background-color: $gray-dark;
-}
-
-.c-about__skills-column {
-
 }
 
 .c-about__skills-title {
     margin-bottom: 20px;
+    margin-bottom: 30px;
     font-family: Noto Sans;
     font-size: 21px;
+    font-size: 36px;
     line-height: 24px;
-    color: $text-gray;
+    color: $orange;
+    cursor: default;
 }
 
 .c-about__skills-item {
     font-family: Roboto;
     font-size: 16px;
     line-height: 28px;
-    color: $green-light;
+    color: #808080;
+    cursor: default;
+}
+
+@media only screen and (max-width: 1200px) {
+    .c-about {
+        padding: 40px 0 0 40px;
+    }
+
+    .c-about__skills {
+        padding: 30px 40px;
+    }
+
+    .c-about__row {
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .c-about {
+        padding: 40px 40px 0 40px;
+    }
+
+    .c-about__row.c-about__row--first {
+        width: auto;
+    }
+
+    .c-about__services {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+        
+        & .c-about__service {
+            width: 20%;
+            margin-bottom: 0;
+
+            & i {
+                font-size: 30px;
+            }
+
+            & span {
+                margin-left: 20px;
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+    }
+
+    .c-about__skills {
+        margin-left: -40px;
+        margin-right: -40px;
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .c-about__row {
+        justify-content: center;
+
+        &.c-about__row--first {
+            justify-content: center;
+            margin-top: 40px;
+            width: auto;
+        }
+    }
+
+    .c-about__info {
+        text-align: center;
+    }
+
+    .c-about__avatar {
+        position: relative;
+        top: auto;
+        right: auto;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .c-about__services {
+        flex-flow: column wrap;
+
+        & .c-about__service {
+            width: auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    .c-about__skills {
+        justify-content: center;
+    }
+
+    .c-about__skills-column {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+        margin: 20px;
+    }
 }

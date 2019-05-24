@@ -11,7 +11,7 @@
                 "title_1": "Hello, my name is Stéphane Gouloumes.",
                 "title_2": "I am a freelance Full Stack Web Developer."
             },
-            "button": "Click here to find out more !"
+            "button": "Learn more about what I do !"
         },
         "about": {
             "header": {
@@ -19,8 +19,16 @@
                 "title_2": "ME."
             },
             "section": {
-                "title": "Full Stack Web Developer",
-                "description": "Graduated of a MSc in Computer Science and Project Management, I worked as a Full Stack Web Developer for 3 years in a large company. Then, I started working as a freelancer 2 years ago.",
+                "info": {
+                    "title": "Full Stack Web Developer",
+                    "description": "Graduated of a MSc in Computer Science and Project Management, I worked as a Full Stack Web Developer for 3 years in a large company. Then, I started working as a freelancer 2 years ago."
+                },
+                "services" : {
+                    "website": "Website Creation",
+                    "app": "Application Conception",
+                    "maintenance": "Maintenance & Bug Fixing",
+                    "api": "API Development"
+                },
                 "stats": {
                     "experience": "5+ Years of experience",
                     "international": "English and French"

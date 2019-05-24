@@ -14,6 +14,8 @@
 
 .c-arrows__button {
     position: relative;
+    position: absolute;
+    left: 0;
     visibility: visible;
     display: flex;
     justify-content: center;
@@ -30,7 +32,18 @@
         background-color: #FBFBFB;
     }
 
+    &.is-green {
+        background-color: #8dffdd;
+
+        & .c-arrows__icon > div {
+            background-color: #00e29f;
+            border-color: #00e29f;
+        }
+    }
+
     &.c-arrows__button--right {
+        left: auto;
+        right: 0;
         border-radius: 4px 0px 0px 4px;
     }
 }

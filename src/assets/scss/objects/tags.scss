@@ -1,14 +1,15 @@
 .o-tag {
-    padding: 8px 16px;
+    padding: 8px 16px 9px 16px;
     font-family: Quicksand;
     font-weight: 500;
     color: $green;
     border: 2px solid $green;
     border-radius: 24px;
+    cursor: default;
 
     &.o-tag--small {
         font-size: 14px;
-        padding: 6px 12px;
+        padding: 6px 12px 7px 12px;
         border-width: 2px;
     }
 }

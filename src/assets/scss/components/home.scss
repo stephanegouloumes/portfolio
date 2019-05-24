@@ -43,6 +43,7 @@
     font-family: Quicksand;
     letter-spacing: 1px;
     text-align: center;
+    cursor: default;
 
     & h1 {
         font-weight: 500;
@@ -73,6 +74,43 @@
     letter-spacing: 2px;
     color: #FFF;
     border-radius: 2px;
-    // background-color: $green;
     background-color: #00e29f;
+
+    transition: ease-out 0.5s background-color;
+
+    &:hover {
+        background-color: darken(#00e29f, 5%);
+    }
+
+    &:active {
+        background-color: darken(#00e29f, 7%);
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .c-home__col--right {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    .c-home__row {
+        justify-content: center;
+        height: 30%;
+    }
+
+    .c-home__header {
+        h1 {
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 21px;
+        }
+    }
+
+    .c-home__button {
+        margin-top: 0;
+        font-size: 14px;
+    }
 }

@@ -59,10 +59,10 @@ class Navbar extends Component {
         return (
             <nav className="c-navbar">
                 <div className={'c-navbar__list c-navbar__list--left ' + this.state.themeColor}>
-                    <NavLink className="c-navbar__item" activeClassName='is-active' id="js-category-home" exact to="/"><span>{t('navbar.home')}</span></NavLink>
-                    <NavLink className="c-navbar__item" activeClassName='is-active' id="js-category-about" to="/about"><span>{t('navbar.about')}</span></NavLink>
-                    <NavLink className="c-navbar__item" activeClassName='is-active' id="js-category-work" to="/work"><span>{t('navbar.work')}</span></NavLink>
-                    <NavLink className="c-navbar__item" activeClassName='is-active' id="js-category-contact" to="/contact"><span>{t('navbar.contact')}</span></NavLink>
+                    <NavLink className="c-navbar__item" activeClassName='is-active' id="js-category-home" exact to="/"><span>{t('navbar.home')}</span><i class="fas fa-home"></i></NavLink>
+                    <NavLink className="c-navbar__item" activeClassName='is-active' id="js-category-about" to="/about"><span>{t('navbar.about')}</span><i class="fas fa-user"></i></NavLink>
+                    <NavLink className="c-navbar__item" activeClassName='is-active' id="js-category-work" to="/work"><span>{t('navbar.work')}</span><i class="fas fa-briefcase"></i></NavLink>
+                    <NavLink className="c-navbar__item" activeClassName='is-active' id="js-category-contact" to="/contact"><span>{t('navbar.contact')}</span><i class="fas fa-envelope"></i></NavLink>
                     <div className={'c-navbar__active-item ' + this.state.themeColor} id="js-category-active"></div>
                 </div>
                 <div className="c-navbar__list c-navbar__list--right">

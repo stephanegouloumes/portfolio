@@ -2,6 +2,14 @@
     height: calc(100% - 100px);
     padding: 40px 100px 0 100px;
 
+    overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  // IE 10+
+    scrollbar-width: none;  // Firefox
+    &::-webkit-scrollbar {
+        display: none;  // Safari and Chrome
+    }
+
     .title {
         color: $red;
 
@@ -18,7 +26,7 @@
     & section {
         display: flex;
         justify-content: space-between;
-        margin-top: 148px;
+        margin-top: 112px;
     }
 }
 
@@ -35,6 +43,8 @@
     font-size: 32px;
     letter-spacing: 1px;
     color: $text-gray-dark;
+    cursor: default;
+    text-align: center;
 }
 
 .c-contact__channels {
@@ -50,4 +60,26 @@
     width: 200px;
     height: 30px;
     margin: 0 20px 50px 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .c-contact {
+        padding: 40px 40px 0 40px;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .c-contact__channels {
+        margin-top: 40px;
+    }
+
+    .c-contact__button {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .c-contact section {
+        margin-top: 60px;
+    }
 }

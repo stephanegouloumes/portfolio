@@ -16,6 +16,11 @@ body {
     z-index: 1;
     height: calc(100% - 30px);
     padding: 0 30px 30px 30px;
+    overflow: hidden;
+    
+    @media only screen and (max-width: 400px) {
+        padding: 0 10px 30px 10px;
+    }
 }
 
 .container {
@@ -35,6 +40,7 @@ header {
     line-height: 80px;
     letter-spacing: 2px;
     color: $orange;
+    cursor: default;
 
     & .is-light {
         color: $orange-light;

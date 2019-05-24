@@ -8,12 +8,14 @@
 
 .c-navbar__list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .c-navbar__list--left {
     position: relative;
-    width: 40%;
+    width: 90%;
+    max-width: 700px;
 
     &.is-about .c-navbar__item {
         color: $orange;
@@ -39,7 +41,7 @@
         }
     }
 
-    .c-navbar__item {
+    & .c-navbar__item {
         position:relative;
         overflow: hidden;
         display: flex;
@@ -51,9 +53,12 @@
         font-size: 16px;
         letter-spacing: 2px;
         color: $green;
-        transition-duration: 0.5s;
-        transition-property: color;
+        transition: ease-out 0.5s color, 0.15s opacity;
         outline: none;
+
+        &:hover:not(.is-active) {
+            opacity: 0.7;
+        }
 
         &.is-active {
             color: #FFF;
@@ -93,9 +98,13 @@
         &:focus:not(:active)::after {
             animation: ripple 1s ease-out;
         }
+
+        & i {
+            display: none;
+        }
     }
 
-    .c-navbar__active-item {
+    & .c-navbar__active-item {
         position: absolute;
         z-index: -1;
         top: -1px;
@@ -123,16 +132,67 @@
 .c-navbar__list--right {
     width: 100%;
     max-width: 60px;
+    padding-right: 10px;
+    margin-left: 30px;
 
-    .c-navbar__item {
+    & .c-navbar__item {
         font-size: 14px;
         font-weight: 300;
         color: $text-gray-dark;
         cursor: pointer;
+        line-height: 11px;
+        height: 11px;
 
         &.is-active {
             font-weight: normal;
             color: $text-gray-dark;
         }
+    }
+
+    & .c-navbar__item-separator {
+        cursor: default;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .c-navbar {
+        padding: 0;
+    }
+
+    .c-navbar__list--left {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .c-navbar__list--right {
+        position: absolute;
+        bottom: 7px;
+        right: 19px;
+    }
+}
+
+@media only screen and (max-width: 495px) {
+    .c-navbar__list--left .c-navbar__item {
+        font-size: 12px;
+        padding: 0 6px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .c-navbar__list--left .c-navbar__item {
+        font-size: 21px;
+        padding: 0 12px;
+
+        span {
+            display: none;
+        }
+
+        i {
+            display: inline;
+        }
+    }
+
+    .c-navbar__active-item {
+        border-radius: 2px;
     }
 }

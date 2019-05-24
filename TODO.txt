@@ -1,0 +1,6 @@
+## TODO
+
+- Review text (EN/FR)
+- Cleanup index.html
+- Optimize performance (minimization ect...)
+- Change subtitle font family

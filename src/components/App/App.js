@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch, withRouter } from 'react-router-dom'
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { withTranslation } from 'react-i18next'
 import detectBrowserLanguage from 'detect-browser-language'
 
@@ -47,20 +48,26 @@ class App extends Component {
 
     render() {
         return (
-            <Router>
-                <div className="c-app">
-                    <Arrows />
-                    <Navbar locale={this.state.locale} onChangeLocale={this.changeLocale} />
-                    <Switch>
-                        <Route exact path="/" component={Home}></Route>
-                        <Route path="/about" component={About}></Route>
-                        <Route path="/work" component={Work}></Route>
-                        <Route path="/contact" component={Contact}></Route>
-                    </Switch>
-                </div>
-            </Router>
+            <div className="c-app">
+                <Arrows leftDisabled />
+                <Navbar locale={this.state.locale} onChangeLocale={this.changeLocale} />
+                <TransitionGroup component={null}>
+                    <CSSTransition
+                        key={this.props.location.key}
+                        timeout={{ enter: 300, exit: 300 }}
+                        classNames={'fade'}
+                    >
+                        <Switch>
+                            <Route exact path="/" component={Home}></Route>
+                            <Route path="/about" component={About}></Route>
+                            <Route path="/work" component={Work}></Route>
+                            <Route path="/contact" component={Contact}></Route>
+                        </Switch>
+                    </CSSTransition>
+                </TransitionGroup>
+            </div>
         )
     }
 }
 
-export default withTranslation('translations')(App)
+export default withTranslation('translations')(withRouter(App))

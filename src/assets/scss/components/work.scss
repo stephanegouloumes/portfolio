@@ -10,7 +10,7 @@
         display: none;  // Safari and Chrome
     }
 
-    .title {
+    & .title {
         color: $blue;
 
         & .is-light {
@@ -18,13 +18,13 @@
         }
     }
 
-    .title-bar {
+    & .title-bar {
         margin-left: 0px;
         background-color: $blue-light;
     }
 
     & section {
-        margin-top: 80px;
+        margin-top: 60px;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
